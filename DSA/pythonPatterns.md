@@ -163,7 +163,7 @@ for i in range(N):
 **
 *    
 
-N = 6
+N = 3
 for i in range(N):
     for j in range(i+1):
         print("*",end=" ")
