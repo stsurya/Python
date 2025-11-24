@@ -72,3 +72,19 @@ for i in range(N):
         print("*",end=" ")
     print()
 ```
+
+```
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2 
+1
+
+
+N = 5
+for i in range(N):
+    for j in range(N-i):
+        print(j+1,end=" ")
+    print()
+```
