@@ -247,3 +247,18 @@ for i in range(N):
         print(chr(65 + j), end=" ")
     print()
 ```
+
+```
+A B C D E 
+A B C D 
+A B C
+A B
+A
+
+N = 5
+
+for i in range(N):
+    for j in range(N-i):
+        print(chr(65 + j), end=" ")
+    print()
+```
