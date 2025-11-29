@@ -6,13 +6,14 @@
 *    
 '''
 
-N = 6
+N = 4
+space = 2 * (N-1)
 for i in range(N):
-    if(i%2 == 0):
-        start = 1
-    else:
-        start = 0
     for j in range(i+1):
-        print(start,end=" ")
-        start = 1 - start
+        print(j+1,end="")
+    for j in range(space+1):
+        print(" ",end="")
+    for j in range(i,-1,-1):
+        print(j+1,end="")
+    space -= 2
     print()
