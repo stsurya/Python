@@ -1,25 +1,29 @@
 '''
-*        *
-**      **
-***    ***
-****  ****
-**********
-****  ****
-***    ***
-**      **
-*        *
+3 3 3 3 3 
+3 2 2 2 3 
+3 2 1 2 3 
+3 2 2 2 3 
+3 3 3 3 3
 '''
 
-n = 5
+n = 3
 
-for i in range(n):
+for i in range(2 * n - 1):
     # Inner loop for columns
-    for j in range(n):
-        # Print star if it's a border cell
-        if i == 0 or j == 0 or i == n - 1 or j == n - 1:
-            print("*", end="")
-        # Print space otherwise
-        else:
-            print(" ", end="")
-    # Move to next line after each row
+    for j in range(2 * n - 1):
+        # Calculate distance from top
+        top = i
+        # Calculate distance from left
+        left = j
+        # Calculate distance from bottom
+        bottom = (2 * n - 2) - i
+        # Calculate distance from right
+        right = (2 * n - 2) - j
+
+        # Take the minimum of all four distances
+        minDist = min(top, bottom, left, right)
+
+        # Print number (starts with n at border, decreases inside)
+        print(n - minDist, end=" ")
+    # Move to the next row
     print()
