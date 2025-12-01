@@ -10,17 +10,16 @@
 *        *
 '''
 
-N = 5
-sp = (2*N) - 2
-for i in range(N):
-    print("*" * (i+1),end="")
-    print(" "*sp,end="")
-    print("*"*(i+1))
-    sp-=2
+n = 5
 
-sp+=4
-for j in range(N-1):
-    print("*"*(N-(j+1)),end="")
-    print(" "*sp,end="")
-    print("*"*(N-(j+1)))
-    sp+=2
+for i in range(n):
+    # Inner loop for columns
+    for j in range(n):
+        # Print star if it's a border cell
+        if i == 0 or j == 0 or i == n - 1 or j == n - 1:
+            print("*", end="")
+        # Print space otherwise
+        else:
+            print(" ", end="")
+    # Move to next line after each row
+    print()
