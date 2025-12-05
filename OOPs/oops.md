@@ -36,3 +36,24 @@ class Person:
     print(p1.name)
     print(p1.age)
 ```
+
+## self parameter
+
+The self parameter is a reference to the current instance of the class. It is used to access properties and methods that belong to the class.
+
+```
+class Person:
+  def __init__(self, name):
+    self.name = name
+
+  def printname(self):
+    print(self.name)
+
+p1 = Person("Tobias")
+p2 = Person("Linus")
+
+p1.printname()
+p2.printname()
+```
+
+It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any method in the class.
