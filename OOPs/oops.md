@@ -57,3 +57,23 @@ p2.printname()
 ```
 
 It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any method in the class.
+
+## class Properties Vs Object Properties
+
+Properties defined inside the `__init__() ` menthod are object propreties. Properties defined outside methods belong to the class itself (class properties) and are shared by all objects:
+
+```
+class Person:
+  species = "Human" # Class property
+
+  def __init__(self, name):
+    self.name = name # Instance property
+
+p1 = Person("Emil")
+p2 = Person("Tobias")
+
+print(p1.name)
+print(p2.name)
+print(p1.species)
+print(p2.species)
+```
