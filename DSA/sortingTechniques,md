@@ -1,0 +1,62 @@
+Overview of the three sorting algorithms:
+
+## Selection Sort
+
+**Idea:** Repeatedly select the minimum element from the unsorted part and move it to the front.
+**Process:**
+
+1. Find the smallest element in the array.
+2. Swap it with the first element.
+3. Move the boundary forward and repeat.
+
+**Time Complexity:**
+Worst/Avg/Best = **O(n²)**
+**Space Complexity:** O(1)
+**Stability:** Not stable
+**When to use:** Simple scenarios where swaps should be minimal.
+
+---
+
+## Bubble Sort
+
+**Idea:** Repeatedly swap adjacent elements if they are in the wrong order.
+**Process:**
+
+1. Compare element i and i+1.
+2. Swap if needed.
+3. Each pass moves the largest element to the end.
+
+**Time Complexity:**
+Worst/Avg = **O(n²)**
+Best = **O(n)** (when already sorted; with optimization)
+**Space Complexity:** O(1)
+**Stability:** Stable
+**When to use:** Only for teaching; rarely used in practice.
+
+---
+
+## Insertion Sort
+
+**Idea:** Insert each element into its correct position in the sorted portion of the array.
+**Process:**
+
+1. Start from index 1.
+2. Compare with previous elements.
+3. Shift elements and insert at correct position.
+
+**Time Complexity:**
+Worst/Avg = **O(n²)**
+Best = **O(n)** (already sorted)
+**Space Complexity:** O(1)
+**Stability:** Stable
+**When to use:** Small datasets, nearly sorted arrays.
+
+---
+
+## Summary Table
+
+| Algorithm      | Best Time | Avg Time | Worst Time | Space | Stable | Notes                       |
+| -------------- | --------- | -------- | ---------- | ----- | ------ | --------------------------- |
+| Selection Sort | O(n²)     | O(n²)    | O(n²)      | O(1)  | No     | Minimizes swaps             |
+| Bubble Sort    | O(n)      | O(n²)    | O(n²)      | O(1)  | Yes    | Easy but slow               |
+| Insertion Sort | O(n)      | O(n²)    | O(n²)      | O(1)  | Yes    | Best for nearly sorted data |
